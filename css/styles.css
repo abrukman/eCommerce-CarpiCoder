@@ -114,6 +114,18 @@ aside {
     margin-top: 2rem;
 }
 
+.numerito {
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    padding: .15rem .25rem;
+    border-radius: .25rem;
+}
+
+.boton-carrito.active .numerito {
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+}
+
 .texto-footer {
     color: var(--clr-main-light);
 }
@@ -184,9 +196,9 @@ main {
 
 }
 
-.carrito-vacio {
+.carrito-vacio,
+.carrito-comprado {
     color: var(--clr-main);
-    display: none;
 }
 
 .carrito-productos {
@@ -237,11 +249,33 @@ main {
     cursor: pointer;
 }
 
+.carrito-acciones-derecha {
+    display: flex;
+    
+}
+
+.carrito-acciones-total {
+    display: flex;
+    background-color: var(--clr-gray);
+    padding: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    color: var(--clr-main);
+    text-transform: uppercase;
+    gap: 1rem;
+}
+
 .carrito-acciones-comprar {
     border: 0;
     background-color: var(--clr-main);
     padding: 1rem;
-    border-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     color: var(--clr-white);
-    
+    text-transform: uppercase;
+    cursor: pointer;    
+}
+
+.disabled {
+    display: none;
 }
